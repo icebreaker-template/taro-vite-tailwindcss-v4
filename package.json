@@ -29,7 +29,7 @@
     "dev:jd": "npm run build:jd -- --watch",
     "dev:harmony-hybrid": "npm run build:harmony-hybrid -- --watch",
     "open": "weapp open -p",
-     "postinstall": "weapp-tw patch"
+    "postinstall": "weapp-tw patch"
   },
   "browserslist": {
     "development": [
@@ -79,6 +79,7 @@
     "eslint-plugin-react-hooks": "^4.4.0",
     "postcss": "^8.5.3",
     "react-refresh": "^0.14.0",
+    "sass": "^1.85.0",
     "stylelint": "^16.4.0",
     "tailwindcss": "3",
     "terser": "^5.30.4",
