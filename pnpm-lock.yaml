@@ -20,6 +20,9 @@ importers:
       '@tarojs/plugin-framework-react':
         specifier: 4.0.9
         version: 4.0.9(@tarojs/helper@4.0.9)(@tarojs/runtime@4.0.9)(@tarojs/shared@4.0.9)(@vitejs/plugin-react@4.3.4(vite@4.5.9(@types/node@22.13.5)(lightningcss@1.29.1)(sass@1.85.0)(terser@5.39.0)))(react@18.3.1)(vite@4.5.9(@types/node@22.13.5)(lightningcss@1.29.1)(sass@1.85.0)(terser@5.39.0))
+      '@tarojs/plugin-html':
+        specifier: ^4.0.9
+        version: 4.0.9(@tarojs/helper@4.0.9)(@tarojs/runtime@4.0.9)(@tarojs/shared@4.0.9)
       '@tarojs/plugin-platform-alipay':
         specifier: 4.0.9
         version: 4.0.9(@tarojs/service@4.0.9)(@tarojs/shared@4.0.9)
@@ -1982,6 +1985,14 @@ packages:
         optional: true
       webpack:
         optional: true
+
+  '@tarojs/plugin-html@4.0.9':
+    resolution: {integrity: sha512-5AgGi9CjbpME+6CBZqVuaDYgZbLuSfvjCYxAVmSlW8EbGCLCootRhK+xVh6capzDabhS4YmRWBCxWNBhc+E/GA==}
+    engines: {node: '>= 18'}
+    peerDependencies:
+      '@tarojs/helper': 4.0.9
+      '@tarojs/runtime': 4.0.9
+      '@tarojs/shared': 4.0.9
 
   '@tarojs/plugin-platform-alipay@4.0.9':
     resolution: {integrity: sha512-juaEABgmqndPQz1fsuy1ByErPDzLMXqaQS128OJV6dsYqJnr43aw2TgMYrtUp4vZ1l2M/OfY9dkUraeA23Uh4g==}
@@ -7470,6 +7481,12 @@ snapshots:
       '@vitejs/plugin-react': 4.3.4(vite@4.5.9(@types/node@22.13.5)(lightningcss@1.29.1)(sass@1.85.0)(terser@5.39.0))
       react: 18.3.1
       vite: 4.5.9(@types/node@22.13.5)(lightningcss@1.29.1)(sass@1.85.0)(terser@5.39.0)
+
+  '@tarojs/plugin-html@4.0.9(@tarojs/helper@4.0.9)(@tarojs/runtime@4.0.9)(@tarojs/shared@4.0.9)':
+    dependencies:
+      '@tarojs/helper': 4.0.9
+      '@tarojs/runtime': 4.0.9
+      '@tarojs/shared': 4.0.9
 
   '@tarojs/plugin-platform-alipay@4.0.9(@tarojs/service@4.0.9)(@tarojs/shared@4.0.9)':
     dependencies:
