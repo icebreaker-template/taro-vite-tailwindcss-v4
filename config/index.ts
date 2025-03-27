@@ -4,8 +4,10 @@ import devConfig from './dev'
 import prodConfig from './prod'
 import { UnifiedViteWeappTailwindcssPlugin } from 'weapp-tailwindcss/vite'
 import tailwindcss from '@tailwindcss/postcss'
+import fs from 'fs-extra'
+import path from 'pathe'
 // import tailwindcss from '@tailwindcss/vite'
-
+const cwd = process.cwd()
 // https://taro-docs.jd.com/docs/next/config#defineconfig-辅助函数
 export default defineConfig<'vite'>(async (merge, { command, mode }) => {
   // const { default: tailwindcss } = await import('@tailwindcss/vite')
@@ -50,7 +52,37 @@ export default defineConfig<'vite'>(async (merge, { command, mode }) => {
         UnifiedViteWeappTailwindcssPlugin({
           rem2rpx: true,
           // appType: 'taro'
-        })
+        }),
+        {
+          name: 'xx',
+          enforce: 'post',
+          async buildEnd() {
+            const modules = [...this.getModuleIds()].map((x) => {
+              return this.getModuleInfo(x)
+            })
+            await Promise.all(modules.map(async (x) => {
+              if (x) {
+                const target = path.resolve(cwd, 'build', path.relative(cwd, x.id.replace('\0', '.').replaceAll(':', '/')))
+                return fs.outputFile(target, x.code ?? '', 'utf8')
+              }
+            }))
+          },
+          async renderChunk(code, chunk, options, meta) {
+            const target = path.resolve(cwd, 'output', path.relative(cwd, chunk.fileName.replace('\0', '.').replaceAll(':', '/')))
+            await fs.outputFile(target, code ?? '', 'utf8')
+          },
+          //   const cwd = process.cwd()
+          //   const modules = [...this.getModuleIds()].map((x) => {
+          //     return this.getModuleInfo(x)
+          //   })
+          //   await Promise.all(modules.map(async (x) => {
+          //     if (x) {
+          //       const target = path.resolve(cwd, 'build', path.relative(cwd, x.id.replace('\0', '.').replaceAll(':', '/')))
+          //       return fs.outputFile(target, x.code ?? '', 'utf8')
+          //     }
+          //   }))
+          // },
+        },
       ]
     },
     mini: {

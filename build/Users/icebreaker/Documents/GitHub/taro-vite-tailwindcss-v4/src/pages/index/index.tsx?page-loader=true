@@ -1,0 +1,10 @@
+import { createPageConfig } from "@tarojs/runtime";
+import component from "/Users/icebreaker/Documents/GitHub/taro-vite-tailwindcss-v4/src/pages/index/index.tsx";
+var config = {
+  "navigationBarTitleText": "首页"
+};
+var inst = Page(createPageConfig(component, 'pages/index/index', {
+  root: {
+    cn: []
+  }
+}, config || {}));

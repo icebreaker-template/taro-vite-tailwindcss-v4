@@ -1,0 +1,27 @@
+import '@tarojs/plugin-platform-weapp/dist/runtime';
+import { window } from "@tarojs/runtime";
+import { createReactApp } from "@tarojs/plugin-framework-react/dist/runtime";
+import { initPxTransform } from "@tarojs/taro";
+import component from "/Users/icebreaker/Documents/GitHub/taro-vite-tailwindcss-v4/src/app.ts";
+import * as React from 'react';
+import ReactDOM from 'react-dom';
+var config = {
+  "pages": ["pages/index/index"],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  }
+};
+window.__taroAppConfig = config;
+var inst = App(createReactApp(component, React, ReactDOM, config));
+initPxTransform({
+  designWidth: 750,
+  deviceRatio: {
+    "375": 2,
+    "640": 1.17,
+    "750": 1,
+    "828": 0.905
+  }
+});
