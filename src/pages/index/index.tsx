@@ -11,7 +11,7 @@ export default function Index() {
     <View>
       <Text className='text-[#123456] bg-amber-100'>Weapp-tailwindcss 模板</Text>
       <View className='index bg-[#123456]'>
-        <Text className='text-[55rpx] text-[#fff]'>Hello world!</Text>
+        <Text className='text-[55rpx] text-[#aae90b]'>Hello world!</Text>
       </View>
     </View>
 
