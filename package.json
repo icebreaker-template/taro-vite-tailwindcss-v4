@@ -44,7 +44,7 @@
   },
   "author": "",
   "dependencies": {
-    "@babel/runtime": "^7.27.1",
+    "@babel/runtime": "^7.27.4",
     "@tarojs/components": "4.1.1",
     "@tarojs/helper": "4.1.1",
     "@tarojs/plugin-framework-react": "4.1.1",
@@ -64,28 +64,28 @@
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.27.1",
+    "@babel/core": "^7.27.4",
     "@babel/preset-react": "^7.27.1",
-    "@tailwindcss/postcss": "^4.1.7",
-    "@tailwindcss/vite": "^4.1.7",
+    "@tailwindcss/postcss": "^4.1.8",
+    "@tailwindcss/vite": "^4.1.8",
     "@tarojs/cli": "4.1.1",
     "@tarojs/vite-runner": "4.1.1",
-    "@types/react": "^19.1.4",
-    "@vitejs/plugin-react": "^4.4.1",
+    "@types/react": "^19.1.6",
+    "@vitejs/plugin-react": "^4.5.0",
     "babel-preset-taro": "4.1.1",
     "eslint": "^8.57.0",
     "eslint-config-taro": "4.1.1",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
-    "postcss": "^8.5.3",
+    "postcss": "^8.5.4",
     "react-refresh": "^0.17.0",
-    "stylelint": "^16.19.1",
-    "tailwindcss": "^4.1.7",
-    "terser": "^5.39.2",
+    "stylelint": "^16.20.0",
+    "tailwindcss": "^4.1.8",
+    "terser": "^5.40.0",
     "typescript": "^5.8.3",
     "vite": "^6.3.5",
     "weapp-ide-cli": "^2.0.12",
-    "weapp-tailwindcss": "^4.1.7"
+    "weapp-tailwindcss": "^4.1.8"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
