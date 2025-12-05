@@ -86,12 +86,13 @@
     "typescript": "^5.9.3",
     "vite": "^7.1.3",
     "weapp-ide-cli": "^4.1.0",
-    "weapp-tailwindcss": "^4.8.8"
+    "weapp-tailwindcss": "^4.8.9"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
       "weapp-tailwindcss",
       "@weapp-tailwindcss/merge"
     ]
-  }
+  },
+  "packageManager": "pnpm@10.24.0"
 }
