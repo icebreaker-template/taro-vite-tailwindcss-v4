@@ -18,7 +18,7 @@
 
 ## 使用前提
 
-- Node.js `20.19+`
+- Node.js `22.12+`（`weapp-tailwindcss@5.2.0` 起）
 - `pnpm`
 - 微信开发者工具
 
@@ -40,11 +40,11 @@ pnpm open
 
 ## 模板说明
 
-- 安装依赖后会自动执行 `weapp-tw patch`
+- 生成模式不需要配置 `postinstall: "weapp-tw patch"`
 - `package.json` 中保留了其他平台的构建脚本，可按需启用
 - 如果你需要 webpack 方案，请使用 `taro-webpack-tailwindcss-v4`
 
 ## 相关文档
 
-- `weapp-tailwindcss`：<https://tw.icebreaker.top/>
+- `weapp-tailwindcss`：<https://tw.weapp.dev/>
 - `Taro`：<https://taro.zone/>
